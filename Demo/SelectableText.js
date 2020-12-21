@@ -101,6 +101,7 @@ export const SelectableText = ({
       : onHighlightPress
     : () => {}
 
+  console.log(value);
   // highlights feature is only supported if `TextComponent == Text`
   let textValue = value;
   if (usesTextComponent) {
@@ -117,11 +118,7 @@ export const SelectableText = ({
                     }
                   : {}
               }
-              onPress={() => {
-                if (isHighlight) {
-                  onHighlightPress && onHighlightPress(id)
-                }
-              }}
+              onPress={() => console.log('foo bar')}
             >
               {text}
             </Text>
