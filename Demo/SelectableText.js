@@ -118,7 +118,11 @@ export const SelectableText = ({
                     }
                   : {}
               }
-              onPress={() => console.log('foo bar')}
+              onPress={() => {
+                if (true) {
+                  onHighlightPress && onHighlightPress(id)
+                }
+              }}
             >
               {text}
             </Text>
